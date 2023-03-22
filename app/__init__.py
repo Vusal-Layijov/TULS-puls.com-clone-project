@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, session, redirect
+from flask import Flask, render_template, request, session, redirect, send_file
 from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_wtf.csrf import CSRFProtect, generate_csrf
@@ -9,6 +9,7 @@ from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
 from .api.serviceroutes import service_routes
 from .api.booking_routes import booking_routes
+
 
 from .seeds import seed_commands
 from .config import Config
@@ -33,6 +34,11 @@ app.register_blueprint(user_routes, url_prefix='/api/users')
 app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(service_routes, url_prefix='/api/services')
 app.register_blueprint(booking_routes, url_prefix='/api/bookings')
+
+@app.route('/react-app/src/components/Tvmount/tvmount.mp4')
+def video():
+    return send_file('/react-app.src/components/Tvmount/tvmount.mp4')
+
 
 db.init_app(app)
 Migrate(app, db)

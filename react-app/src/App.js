@@ -7,6 +7,7 @@ import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
 import Cleaning from "./components/Cleaning";
 import HomePage from "./HomePage";
+import TvMount from "./components/TvMount/tvmount";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -28,8 +29,11 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path={'/services/cleaning'}>
+          <Route exact path={'/services/cleaning'}>
             <Cleaning />
+          </Route>
+          <Route path={'/services/tvmounting'}>
+            <TvMount />
           </Route>
         </Switch>
       )}

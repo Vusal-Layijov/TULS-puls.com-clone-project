@@ -19,8 +19,8 @@ export default function Cleaning(){
         <>
         <section>
             <div id='homePage-previewImage' style={{ backgroundImage: `url(${cleaner})`, backgroundSize: 'cover', height: '85vh' }}>
-                <div style={{ paddingTop: '100px' }}>
-                </div>
+                {/* <div style={{ paddingTop: '100px' }}>
+                </div> */}
             </div>
         </section>
 
