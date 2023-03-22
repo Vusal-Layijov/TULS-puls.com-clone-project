@@ -6,7 +6,7 @@ import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
 import Cleaning from "./components/Cleaning";
-import HomePage from "./HomePage";
+import HomePage from "./components/HomePage";
 import TvMount from "./components/TvMount/tvmount";
 import HomeRepair from "./components/HomeRepair";
 import Handyman from "./components/Handyman";

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 // import { getUserBusinesses } from '../../store/business';
-// import ManageBusinesses from '../ManageBusinesses';
+import MyDashboard from '../MyDashboard';
 import './index.css';
 
 
@@ -47,7 +47,7 @@ function UserProfilePage() {
             </div>
             <div>
                 <h2>View {userInfo.username}'s Businesses</h2>
-                {/* <ManageBusinesses businesses={businesses} isOwner={isOwner} /> */}
+                <MyDashboard services={userInfo.services} /> 
             </div>
 
         </div>

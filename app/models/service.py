@@ -12,6 +12,8 @@ class Service(db.Model):
     name = db.Column(db.String(150), nullable=False)
     description = db.Column(db.String(), nullable=False)
     price = db.Column(db.Integer)
+    city=db.Column(db.String(), nullable=False)
+    state=db.Column(db.String(), nullable=False)
     availability=db.Column(db.Boolean, default=True, nullable=False)
     
     owner_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
@@ -36,6 +38,8 @@ class Service(db.Model):
             'description': self.description,
             'availability':self.availability,
             'price':self.price,
+            'city':self.city,
+            'state':self.state,
             'owner':self.owner.to_dict(),
             'reviews':[review.to_dict() for review in self.reviews],
             'numReviews':len(self.reviews),
@@ -53,6 +57,8 @@ class Service(db.Model):
             'description': self.description,
             'availability':self.availability,
             'price':self.price,
+            'city':self.city,
+            'state':self.state,
             'reviews':[review.to_dict() for review in self.reviews],
             'numReviews':len(self.reviews),
             'avgRating':sum(review.stars for review in self.reviews)/len(self.reviews) if len(self.reviews) >0 else 0,

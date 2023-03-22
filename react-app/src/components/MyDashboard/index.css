@@ -1,0 +1,117 @@
+.spotClass {
+    width: 280px;
+    height: 280px;
+}
+
+.forImage {
+    width: 250px;
+    height: 260px;
+}
+
+.forfirst {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 5px;
+
+}
+
+.forInside {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.forNewDiv {
+    height: 400px;
+    width: 400px;
+
+}
+
+.forNav {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.basGot {
+    margin-left: 150px;
+
+}
+
+.Red {
+    background-color: red;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+        "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 20px 0px 0px 0px;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+        transform 0.1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+}
+
+.Blk {
+    background-color: grey;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+        "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 20px 0px 0px 0px;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+        transform 0.1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+}
+
+.sonMod {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 210px;
+    background-color: rgb(223, 221, 221);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navlinkBut {
+    margin: 10px 4px;
+    background-color: rgb(143, 143, 143);
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}

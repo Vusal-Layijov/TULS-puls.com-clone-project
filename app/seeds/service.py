@@ -10,7 +10,9 @@ def seed_services():
         price=50,
         availability=True,
         owner_id=1,
-        service_type_id=1
+        service_type_id=1,
+        city='Los Angeles',
+        state='CA'
     )
     service2 = Service(
         name='Gardening',
@@ -18,7 +20,9 @@ def seed_services():
         price=100.0,
         availability=True,
         owner_id=2,
-        service_type_id=2
+        service_type_id=2,
+        city='Los Angeles',
+        state='CA'
     )
 
     service3 = Service(
@@ -28,6 +32,8 @@ def seed_services():
         availability=True,
         owner_id=1,
         service_type_id=3,
+        city='Los Angeles',
+        state='CA'
     )
 
     service4 = Service(
@@ -37,6 +43,8 @@ def seed_services():
         availability=True,
         owner_id=3,
         service_type_id=4,
+        city='Los Angeles',
+        state='CA'
     )
 
     service5 = Service(
@@ -46,6 +54,8 @@ def seed_services():
         availability=True,
         owner_id=2,
         service_type_id=5,
+        city='Los Angeles',
+        state='CA'
     )
     # Add the businesses to the database
     db.session.add_all([service1,service2,service3,service4,service5])
