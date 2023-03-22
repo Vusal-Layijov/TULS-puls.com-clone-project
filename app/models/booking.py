@@ -29,6 +29,8 @@ class Booking(db.Model):
             'id': self.id,
             'service_id': self.service_id,
             'user_id':self.user_id,
+            "user":self.user.to_dict(),
+            'service':self.service.to_dict(),
             'start_date':self.start_date,
             'end_date':self.end_date,
             'created_at': self.created_at,

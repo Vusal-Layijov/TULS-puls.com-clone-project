@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
-from flask_login import login_required
-from app.models import User
+from flask_login import login_required,current_user
+from app.models import User,Service
 
 user_routes = Blueprint('users', __name__)
 
@@ -23,3 +23,12 @@ def user(id):
     """
     user = User.query.get(id)
     return user.to_dict()
+
+@user_routes.route('/<int:userId>/current')
+@login_required
+def current_user_services(userId):
+    allservices=Service.query.filter_by(owner_id = current_user.id).all()
+
+    servvie_dict= [service.to_dict() for service in allservices]
+
+    return jsonify({"servicess":servvie_dict})

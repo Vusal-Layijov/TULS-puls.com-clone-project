@@ -4,9 +4,9 @@ from sqlalchemy.sql import text
 def seed_service_types():
     cleaning = ServiceType(type_name='Cleaning')
     home_repair = ServiceType(type_name='Home Repair')
-    handy_man = ServiceType(type_name='Handy Man')
+    handy_man = ServiceType(type_name='Handyman services')
     phone_repair = ServiceType(type_name='Phone Repair')
-    tv_mounting = ServiceType(type_name='TV Mointing')
+    tv_mounting = ServiceType(type_name='TV Mounting')
 
     db.session.add_all([cleaning, home_repair, handy_man, phone_repair, tv_mounting])
     db.session.commit()
