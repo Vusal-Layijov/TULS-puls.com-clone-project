@@ -46,3 +46,19 @@ class Service(db.Model):
             'updated_at': self.updated_at,
             # 'images': self.images
         }
+    def to_dict_without(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'description': self.description,
+            'availability':self.availability,
+            'price':self.price,
+            'reviews':[review.to_dict() for review in self.reviews],
+            'numReviews':len(self.reviews),
+            'avgRating':sum(review.stars for review in self.reviews)/len(self.reviews) if len(self.reviews) >0 else 0,
+            'type':self.type.to_dict(),
+            'service_type_id':self.service_type_id,
+            'created_at': self.created_at,
+            'updated_at': self.updated_at,
+            # 'images': self.images
+        }

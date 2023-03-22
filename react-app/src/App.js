@@ -8,6 +8,10 @@ import Navigation from "./components/Navigation";
 import Cleaning from "./components/Cleaning";
 import HomePage from "./HomePage";
 import TvMount from "./components/TvMount/tvmount";
+import HomeRepair from "./components/HomeRepair";
+import Handyman from "./components/Handyman";
+import PhoneRepair from "./components/PhoneRepair";
+import UserProfilePage from "./components/ProfilePage";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -34,6 +38,18 @@ function App() {
           </Route>
           <Route path={'/services/tvmounting'}>
             <TvMount />
+          </Route>
+          <Route path={'/services/homerepair'}>
+            <HomeRepair />
+          </Route>
+          <Route path={'/services/handyman'}>
+            <Handyman />
+          </Route>
+          <Route path={'/services/phonerepair'}>
+            <PhoneRepair />
+          </Route>
+          <Route exact path="/users/:userId/" >
+            <UserProfilePage />
           </Route>
         </Switch>
       )}

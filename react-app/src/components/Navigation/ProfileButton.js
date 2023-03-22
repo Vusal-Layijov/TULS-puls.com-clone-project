@@ -49,8 +49,7 @@ function ProfileButton({ user }) {
       <ul className={ulClassName} ref={ulRef}>
         {user ? (
           <>
-            <li>{user.username}</li>
-            <li>{user.email}</li>
+            <li><NavLink to={`/users/${user.id}`} >My dashboard</NavLink> </li>
             <li>
               <button onClick={handleLogout}>Log Out</button>
             </li>

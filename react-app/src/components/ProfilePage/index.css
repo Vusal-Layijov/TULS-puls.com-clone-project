@@ -1,0 +1,35 @@
+.profile-page-user-banner {
+    display: flex;
+    /* background-color: rgb(216, 212, 212); */
+    width: 100vw;
+    /* justify-content: center; */
+
+}
+
+.profile-page-user-icon-background {
+    background-color: gray;
+    border-radius: 40px;
+    height: 70px;
+    width: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.profile-page-user-info {
+    display: flex;
+
+    flex-direction: column;
+    padding: 10px;
+}
+
+.maindiv {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 100px;
+}
