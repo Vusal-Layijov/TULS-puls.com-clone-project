@@ -21,8 +21,8 @@ class Service(db.Model):
 
     owner = db.relationship("User", back_populates="services")
     type=db.relationship('ServiceType', back_populates='services')
-    reviews = db.relationship("Review", back_populates='service')
-    bookings=db.relationship('Booking',back_populates='service')
+    reviews = db.relationship("Review", back_populates='service', cascade="all,delete")
+    bookings=db.relationship('Booking',back_populates='service',cascade="all,delete")
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(
         db.DateTime,

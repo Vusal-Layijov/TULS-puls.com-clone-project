@@ -43,6 +43,14 @@ export const update_sevice_thunk = (id, service) => async dispatch =>{
     }
 }
 
+export const delete_service_thunk= (id) => async dispatch =>{
+    console.log('from delete storeeeeeee ')
+    const response = await fetch(`/api/services/${id}`,{
+        method:'DELETE',
+        headers:{"Content-Type":"application/json"}
+    })
+}
+
 const initialState={
     all_services:{}
 }

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 import { update_sevice_thunk } from '../../store/services';
 import { authenticate } from '../../store/session';
+import './index.css'
 
 export default function UpdateService(){
     const {id} = useParams()
@@ -10,14 +11,14 @@ export default function UpdateService(){
     const history = useHistory()
     const ownerId = useSelector(state => state.session.user.id)
     const service = useSelector(state =>state.session.user.services.find(ser =>ser.id==id))
-    console.log('priceeeeeeeeeeee', service.state)
+    // console.log('priceeeeeeeeeeee', service.state)
 
     const [name, setName] = useState(service.name)
     const [description, setDescription] = useState(service.description);
     const [price, setPrice] = useState(service.price);
     const [city, setCity] = useState(service.city)
     const [state, setState] = useState(service.state)
-    const [service_type_id, setServiceTypeId] = useState(null)
+    const [service_type_id, setServiceTypeId] = useState(service.service_type_id)
 
 
     const [validationErrors, setValidationErrors] = useState({
@@ -144,7 +145,7 @@ export default function UpdateService(){
                 <div>
                     <label>
                         Choose your service type...<span className="validationErrors" >{validationErrors.service_type_id}</span>
-                        <select name='type' onChange={(e) => setServiceTypeId(+e.target.value)}>
+                        <select value={service_type_id} name='type' onChange={(e) => setServiceTypeId(+e.target.value)}>
                             <option value='' >Select Type</option>
                             <option value={1} >Cleaning</option>
                             <option value={2} >Home Repair</option>
