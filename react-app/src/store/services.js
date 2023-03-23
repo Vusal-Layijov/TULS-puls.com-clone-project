@@ -1,4 +1,6 @@
+import { authenticate } from "./session"
 const LOAD_SERVICES='services/LOAD_SERVICES'
+const CREATE_SERVICE = 'services/CREATE_SERVICE'
 
 const load_services_action=(payload) =>{
     return{
@@ -12,6 +14,19 @@ export const load_services_thunk = (service_type_id) => async dispatch => {
     if(response.ok){
         const data = await response.json()
         dispatch(load_services_action(data))
+        return data
+    }
+}
+
+export const create_service_thunk = (service) => async dispatch =>{
+    const response = await fetch('/api/services', {
+        headers:{"Content-Type":"application/json"},
+        method:'POST',
+        body:JSON.stringify(service)
+    })
+    if (response.ok){
+        const data = await response.json()
+        
         return data
     }
 }

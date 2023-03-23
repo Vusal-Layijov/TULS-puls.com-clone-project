@@ -5,7 +5,7 @@ from wtforms.validators import DataRequired, NumberRange,Length
 class ServiceForm(FlaskForm):
     name=StringField('Name', validators=[DataRequired()])
     description = TextAreaField('Description', validators=[DataRequired()])
-    price= IntegerField('Price')
+    price= FloatField('Price')
     city=StringField('City', validators=[DataRequired()])
     state=StringField('State', validators=[DataRequired()])
     availability=BooleanField('Availability')

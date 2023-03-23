@@ -11,7 +11,7 @@ class Service(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(150), nullable=False)
     description = db.Column(db.String(), nullable=False)
-    price = db.Column(db.Integer)
+    price = db.Column(db.Float,)
     city=db.Column(db.String(), nullable=False)
     state=db.Column(db.String(), nullable=False)
     availability=db.Column(db.Boolean, default=True, nullable=False)

@@ -26,6 +26,8 @@ def create_service():
             name=form.name.data,
             description=form.description.data,
             price=form.price.data,
+            city=form.city.data,
+            state=form.state.data,
             owner_id=current_user.id,
             service_type_id=form.service_type_id.data
         )

@@ -12,6 +12,7 @@ import HomeRepair from "./components/HomeRepair";
 import Handyman from "./components/Handyman";
 import PhoneRepair from "./components/PhoneRepair";
 import UserProfilePage from "./components/ProfilePage";
+import CreateService from "./components/CreateService";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route exact path={'/services/cleaning'}>
             <Cleaning />
+          </Route>
+          <Route exact path={'/services/new'}>
+            <CreateService />
           </Route>
           <Route path={'/services/tvmounting'}>
             <TvMount />

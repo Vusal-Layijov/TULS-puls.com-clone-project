@@ -49,7 +49,7 @@ function Navigation({ isLoaded }){
 
 				{sessionUser && (
 					<>
-						<NavLink to="/businesses/new" style={{ color: 'red' }} >Become a tulser</NavLink>
+						<NavLink to="/services/new" style={{ color: 'red' }} >Become a tulser</NavLink>
 					</>
 				)}
 			</div>
