@@ -49,6 +49,8 @@ def update_service(id):
     service.price=data.get('price', service.price)
     service.availability=data.get('availability', service.availability)
     service.service_type_id=data.get('service_type_id',service.service_type_id)
+    service.city=data.get('city', service.city)
+    service.state=data.get('state',service.state)
 
     db.session.commit()
 

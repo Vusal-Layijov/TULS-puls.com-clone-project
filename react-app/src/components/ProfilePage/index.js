@@ -46,7 +46,7 @@ function UserProfilePage() {
                 </div>
             </div>
             <div>
-                <h2>View {userInfo.username}'s Businesses</h2>
+                <h2>View {userInfo.username}'s Services</h2>
                 <MyDashboard services={userInfo.services} /> 
             </div>
 

@@ -94,7 +94,7 @@ export default function CreateService(){
                     </label>
                 </div>
                 <div>
-                    <label for="state-dropdown">Select a state:
+                    <label for="state-dropdown">Select a state:<span className='validationErrors' >{validationErrors.state}</span>
                         <select id="state-dropdown" name="state" onChange={(e) => setState(e.target.value)}>
                             <option value="">-- Select a state --</option>
                             <option value="AL">Alabama</option>
@@ -152,7 +152,7 @@ export default function CreateService(){
                 </div>
                 <div>
                     <label>
-                        Choose your service type...<span className="validationErrors" >{validationErrors.type}</span>
+                        Choose your service type...<span className="validationErrors" >{validationErrors.service_type_id}</span>
                         <select name='type' onChange={(e) => setServiceTypeId(+e.target.value)}>
                             <option value='' >Select Type</option>
                             <option value={1} >Cleaning</option>

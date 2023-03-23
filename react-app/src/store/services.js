@@ -31,6 +31,17 @@ export const create_service_thunk = (service) => async dispatch =>{
     }
 }
 
+export const update_sevice_thunk = (id, service) => async dispatch =>{
+    const response = await fetch (`/api/services/${id}`,{
+        method:'PUT',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify(service)
+    })
+    if(response.ok){
+        const data = await response.json()
+        return data
+    }
+}
 
 const initialState={
     all_services:{}
