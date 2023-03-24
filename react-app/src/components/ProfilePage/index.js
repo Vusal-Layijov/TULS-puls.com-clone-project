@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 // import { getUserBusinesses } from '../../store/business';
 import MyDashboard from '../MyDashboard';
 import './index.css';
+import MyBookings from '../MyBookings';
 
 
 function UserProfilePage() {
@@ -45,11 +46,15 @@ function UserProfilePage() {
 
                 </div>
             </div>
-            <div>
-                <h2>View {userInfo.username}'s Services</h2>
-                <MyDashboard services={userInfo.services} /> 
+            <div style={{display:'flex'}} >
+                <div>
+                    <h2>View {userInfo.username}'s Services</h2>
+                    <MyDashboard services={userInfo.services} /> 
+                </div>
+                <div>
+                    <MyBookings user={userInfo} />
+                </div>
             </div>
-
         </div>
     )
 

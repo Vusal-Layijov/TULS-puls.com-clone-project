@@ -10,8 +10,10 @@ class Booking(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     service_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("services.id")), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("users.id")), nullable=False)
-    start_date = db.Column(db.DateTime, nullable=False)
-    end_date = db.Column(db.DateTime, nullable=False) 
+    date = db.Column(db.Date, nullable=False)
+    notes=db.Column(db.String())
+    address = db.Column(db.String())
+    city = db.Column(db.String())
 
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(
@@ -31,8 +33,10 @@ class Booking(db.Model):
             'user_id':self.user_id,
             "user":self.user.to_dict(),
             'service':self.service.to_dict(),
-            'start_date':self.start_date,
-            'end_date':self.end_date,
+            'date':self.date,
+            'address':self.address,
+            'city':self.city,
+            'notes':self.notes,
             'created_at': self.created_at,
             'updated_at': self.updated_at
         }

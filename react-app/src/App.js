@@ -14,6 +14,7 @@ import PhoneRepair from "./components/PhoneRepair";
 import UserProfilePage from "./components/ProfilePage";
 import CreateService from "./components/CreateService";
 import UpdateService from "./components/UpdateService";
+import CreateBooking from "./components/CreateBooking";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -40,6 +41,9 @@ function App() {
           </Route>
           <Route exact path={'/services/new'}>
             <CreateService />
+          </Route>
+          <Route exact path={'/services/:id/bookings/new'} >
+            <CreateBooking />
           </Route>
           <Route path={'/services/tvmounting'}>
             <TvMount />

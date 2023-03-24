@@ -10,6 +10,7 @@ const load_services_action=(payload) =>{
 }
 
 export const load_services_thunk = (service_type_id) => async dispatch => {
+    console.log('after', service_type_id)
     const response = await fetch(`/api/services?service_type_id=${service_type_id}`)
     if(response.ok){
         const data = await response.json()

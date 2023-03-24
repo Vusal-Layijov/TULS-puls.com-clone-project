@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: ac3e27edda56
+Revision ID: c3f7545d56f1
 Revises: 
-Create Date: 2023-03-22 16:10:40.291622
+Create Date: 2023-03-23 18:47:04.321582
 
 """
 from alembic import op
@@ -11,9 +11,8 @@ import sqlalchemy as sa
 import os
 environment = os.getenv("FLASK_ENV")
 SCHEMA = os.environ.get("SCHEMA")
-
 # revision identifiers, used by Alembic.
-revision = 'ac3e27edda56'
+revision = 'c3f7545d56f1'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -54,7 +53,7 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('name', sa.String(length=150), nullable=False),
     sa.Column('description', sa.String(), nullable=False),
-    sa.Column('price', sa.Integer(), nullable=True),
+    sa.Column('price', sa.Float(), nullable=True),
     sa.Column('city', sa.String(), nullable=False),
     sa.Column('state', sa.String(), nullable=False),
     sa.Column('availability', sa.Boolean(), nullable=False),
@@ -72,8 +71,10 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('service_id', sa.Integer(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
-    sa.Column('start_date', sa.DateTime(), nullable=False),
-    sa.Column('end_date', sa.DateTime(), nullable=False),
+    sa.Column('date', sa.Date(), nullable=False),
+    sa.Column('notes', sa.String(), nullable=True),
+    sa.Column('address', sa.String(), nullable=True),
+    sa.Column('city', sa.String(), nullable=True),
     sa.Column('created_at', sa.DateTime(), nullable=True),
     sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.ForeignKeyConstraint(['service_id'], ['services.id'], ),

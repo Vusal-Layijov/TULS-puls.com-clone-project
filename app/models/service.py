@@ -48,6 +48,7 @@ class Service(db.Model):
             'service_type_id':self.service_type_id,
             'created_at': self.created_at,
             'updated_at': self.updated_at,
+            'bookings':[{'id':booking.id, 'date':booking.date,} for booking in self.bookings],
             # 'images': self.images
         }
     def to_dict_without(self):
