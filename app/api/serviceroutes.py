@@ -60,7 +60,7 @@ def update_service(id):
 def delete_service(id):
     service=Service.query.get(id)
     if not service:
-        return jsonify({'message':'BUsiness not found'}), 404
+        return jsonify({'message':'Service not found'}), 404
     
     db.session.delete(service)
     db.session.commit()

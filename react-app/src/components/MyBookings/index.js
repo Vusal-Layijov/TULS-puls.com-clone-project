@@ -3,6 +3,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink, Route, useParams } from 'react-router-dom';
 import OpenModalButton from '../OpenModalButton';
+import DeleteBooking from "../DeleteBooking";
 
 export default function MyBookings({user}){
     console.log('userrrrr bookkinggggg', user)
@@ -18,8 +19,8 @@ export default function MyBookings({user}){
                         <p>With: {booking.service}</p>
                         <p>Date: {booking.date.slice(0,11)}</p>
                         <p>Special notes: {booking.notes}</p>
-                        <button>Update</button>
-                        <button>Delete</button>
+                        <NavLink to={`/bookings/${booking.id}/edit`} > <button>Update</button> </NavLink>
+                        <div><OpenModalButton className={'default-button curs rd-bg'} buttonText="Delete" modalComponent={<DeleteBooking bookingId={booking.id} />} /></div>
                     </div>
                     
                 )

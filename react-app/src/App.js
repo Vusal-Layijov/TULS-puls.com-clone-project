@@ -15,6 +15,7 @@ import UserProfilePage from "./components/ProfilePage";
 import CreateService from "./components/CreateService";
 import UpdateService from "./components/UpdateService";
 import CreateBooking from "./components/CreateBooking";
+import { UpdateBooking } from "./components/UpdateBooking";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -59,6 +60,9 @@ function App() {
           </Route>
           <Route exact path={'/services/:id/edit'}>
             <UpdateService />
+          </Route>
+          <Route path={'/bookings/:id/edit'} >
+            <UpdateBooking />
           </Route>
           <Route exact path="/users/:userId/" >
             <UserProfilePage />

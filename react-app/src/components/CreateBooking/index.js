@@ -60,11 +60,11 @@ export default function CreateBooking() {
 
 
 
-        const currentDtae= new Date().toISOString().slice(0,10)
+        const currentDate= new Date().toISOString().slice(0,10)
         const errors = {}
         if(booked) errors.date="This service is booked for this day please choose another day"
         if (!newBooking.date) errors.date='Date is required'
-        if(newBooking.date<currentDtae) errors.date='Cannot book past date'
+        if(newBooking.date<currentDate) errors.date='Cannot book past date'
         if(!newBooking.address) errors.address ='Address is required'
         if(!newBooking.city) errors.city='City is required'
         console.log('boooking', newBooking)

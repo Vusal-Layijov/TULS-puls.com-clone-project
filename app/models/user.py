@@ -36,6 +36,6 @@ class User(db.Model, UserMixin):
             'username': self.username,
             'email': self.email,
             'membership':self.membership_id,
-            'bookings':[{'id':booking.id, 'service_id':booking.service_id,'date':booking.date,'notes':booking.notes,'service':booking.service.name} for booking in self.bookings],
+            'bookings':[{'id':booking.id,"address":booking.address,"city":booking.city, 'service_id':booking.service_id,'date':booking.date,'notes':booking.notes,'service':booking.service.name} for booking in self.bookings],
             'services':[service.to_dict_without() for service in self.services]
         }

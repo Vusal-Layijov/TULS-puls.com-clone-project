@@ -14,6 +14,11 @@ def get_bookings():
     booking_dict=[booking.to_dict() for booking in bookings]
     return jsonify({'bookings':booking_dict})
 
+@booking_routes.route('')
+def get_all_bookings():
+    bookings = db.session.query(Booking).all()
+    book_dict= [book.to_dict() for book in bookings]
+    return jsonify({"bookings":book_dict})
 
 @booking_routes.route('', methods=["POST"])
 @login_required
@@ -53,3 +58,12 @@ def update_booking(id):
         db.session.commit()
         return jsonify(booking.to_dict()), 200
     return jsonify({"errors":form.errors})
+
+@booking_routes.route('/<int:id>', methods=["DELETE"])
+def delete_booking(id):
+    booking=Booking.query.get(id)
+    if not booking:
+        return jsonify({'message':'Booking not found'}), 404
+    db.session.delete(booking)
+    db.session.commit()
+    return jsonify({'message':"successfully deleted"})
