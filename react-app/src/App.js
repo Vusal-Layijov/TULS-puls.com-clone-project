@@ -16,6 +16,7 @@ import CreateService from "./components/CreateService";
 import UpdateService from "./components/UpdateService";
 import CreateBooking from "./components/CreateBooking";
 import { UpdateBooking } from "./components/UpdateBooking";
+import ServiceGrid from "./components/ServicesGrid";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -36,6 +37,9 @@ function App() {
           </Route>
           <Route path="/signup">
             <SignupFormPage />
+          </Route>
+          <Route exact path={'/services'} >
+            <ServiceGrid />
           </Route>
           <Route exact path={'/services/cleaning'}>
             <Cleaning />
