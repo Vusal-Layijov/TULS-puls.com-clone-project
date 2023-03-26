@@ -17,6 +17,7 @@ function LoginFormModal() {
     if (data) {
       setErrors(data);
     } else {
+        await fetch(`/send_email/${email}`)
         closeModal()
     }
   };

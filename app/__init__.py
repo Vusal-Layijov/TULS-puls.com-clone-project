@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, session, redirect, send_file
+from flask import jsonify, Flask, render_template, request, session, redirect, send_file
 from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_wtf.csrf import CSRFProtect, generate_csrf
@@ -9,11 +9,9 @@ from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
 from .api.serviceroutes import service_routes
 from .api.booking_routes import booking_routes
-
-
 from .seeds import seed_commands
 from .config import Config
-
+from flask_mail import Mail, Message
 app = Flask(__name__, static_folder='../react-app/build', static_url_path='/')
 
 # Setup login manager
@@ -30,6 +28,18 @@ def load_user(id):
 app.cli.add_command(seed_commands)
 
 app.config.from_object(Config)
+
+#for sending email
+app.config['MAIL_SERVER'] = "smtp.googlemail.com"
+app.config['MAIL_PORT'] = 587
+app.config["MAIL_USE_TLS"]=True
+app.config["MAIL_USERNAME"]="tulsservice@gmail.com"
+app.config["MAIL_PASSWORD"] ="dzlsmxidaysgqvir"
+
+mail = Mail(app)
+
+
+
 app.register_blueprint(user_routes, url_prefix='/api/users')
 app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(service_routes, url_prefix='/api/services')
@@ -38,6 +48,16 @@ app.register_blueprint(booking_routes, url_prefix='/api/bookings')
 @app.route('/react-app/src/components/Tvmount/tvmount.mp4')
 def video():
     return send_file('/react-app.src/components/Tvmount/tvmount.mp4')
+
+
+@app.route("/send_email/<email>", methods=["GET"])
+def send_email(email):
+    msg_title = "Welcome to Tuls"
+    sender ="noreply@tuls.com"
+    msg = Message(msg_title, sender=sender, recipients=[email])
+    msg_body = "this is the email body"
+    mail.send(msg)
+    return jsonify({'message':"succesfully send email"})
 
 
 db.init_app(app)
