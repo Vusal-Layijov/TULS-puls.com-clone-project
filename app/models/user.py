@@ -13,6 +13,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(40), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
+    image = db.Column(db.String())
     membership_id= db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('memberships.id')))
 
     services = db.relationship("Service", back_populates="owner", cascade="all,delete")
@@ -36,6 +37,7 @@ class User(db.Model, UserMixin):
             'username': self.username,
             'email': self.email,
             'membership':self.membership_id,
+            'image':self.image,
             'bookings':[{'id':booking.id,"address":booking.address,"city":booking.city, 'service_id':booking.service_id,'date':booking.date,'notes':booking.notes,'service':booking.service.name} for booking in self.bookings],
             'services':[service.to_dict_without() for service in self.services]
         }

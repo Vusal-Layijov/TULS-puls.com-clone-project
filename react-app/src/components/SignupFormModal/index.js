@@ -10,13 +10,23 @@ function SignupFormModal() {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
+	const [image, setImage] = useState('')
 	const [errors, setErrors] = useState([]);
 	const { closeModal } = useModal();
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		if (password === confirmPassword) {
-			const data = await dispatch(signUp(username, email, password));
+			// #for image
+			const formData = new FormData()
+			formData.append('username',username)
+			formData.append('email', email)
+			formData.append('password',password)
+			formData.append('image',image)
+			console.log("formdataaaaaa", formData)
+			//const data = await dispatch(signUp(username, email, password));
+			const data = await dispatch(signUp(formData));
+			console.log('from signuppppp', data)
 						 await fetch(`/send_email/${email}`)
 			if (data) {
 				setErrors(data);
@@ -33,7 +43,7 @@ function SignupFormModal() {
 	return (
 		<>
 			<h1>Sign Up</h1>
-			<form onSubmit={handleSubmit}>
+			<form onSubmit={handleSubmit} encType="multipart/form-data" >
 				<ul>
 					{errors.map((error, idx) => (
 						<li key={idx}>{error}</li>
@@ -66,6 +76,8 @@ function SignupFormModal() {
 						required
 					/>
 				</label>
+				<input id="image" type="file" accept="image/*" onChange={(e) => setImage(e.target.files[0])}  >
+				</input>
 				<label>
 					Confirm Password
 					<input

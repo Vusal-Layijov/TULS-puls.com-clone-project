@@ -37,7 +37,7 @@ function UserProfilePage() {
                 <h1>Welcome to {userInfo.username}'s Page</h1>
                 <div class="profile-page-user-banner">
                     <div class="profile-page-user-icon-background" >
-                        <i className="fas fa-user-circle"></i>
+                        <img src={userInfo.image} alt="profile img" ></img>
                     </div>
                     <div class="profile-page-user-info">
                         <p>Username: {userInfo.username}</p>

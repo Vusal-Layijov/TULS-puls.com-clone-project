@@ -1,5 +1,7 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField
+from flask_wtf.file import FileField, FileAllowed, FileRequired
+from app.api.awshelpers import ALLOWED_EXTENSIONS
+from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, Email, ValidationError
 from app.models import User
 
@@ -25,3 +27,4 @@ class SignUpForm(FlaskForm):
         'username', validators=[DataRequired(), username_exists])
     email = StringField('email', validators=[DataRequired(), user_exists])
     password = StringField('password', validators=[DataRequired()])
+    image=FileField("Image File", validators=[FileRequired(),FileAllowed(list(ALLOWED_EXTENSIONS))])
