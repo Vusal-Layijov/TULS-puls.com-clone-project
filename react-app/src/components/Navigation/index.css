@@ -21,7 +21,8 @@
    position: absolute; 
   display: flex;
   font-family: Helvetica, sans-serif;
-  justify-content: space-between;
+  justify-content:flex-start;
+  gap: 25px;
   justify-items: center;
   /* padding: 10px; */
   width: 100%;
@@ -49,7 +50,7 @@
   align-items: center;
   height: 100%;
   width: 150px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 
@@ -63,7 +64,7 @@
 .navStyle {
   display: flex;
   align-items: center;
-  margin-left: -20px;
+  margin-left: 755px;
   gap: 15px;
   margin-right: 60px;
 

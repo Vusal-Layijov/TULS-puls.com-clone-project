@@ -24,7 +24,7 @@ function Navigation({ isLoaded }){
 	return (
 		<div className='homePageNav' >
 			<div id="logo-container">
-				<NavLink style={{ marginLeft: '50px' }} exact to="/">
+				<NavLink style={{ marginLeft: '80px' }} exact to="/">
 					<img
 						src={logo}
 						alt="logo"

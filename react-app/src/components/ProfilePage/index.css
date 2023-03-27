@@ -1,22 +1,28 @@
 .profile-page-user-banner {
     display: flex;
     /* background-color: rgb(216, 212, 212); */
-    width: 100vw;
+    width: 150px;
     /* justify-content: center; */
-
 }
 
 .profile-page-user-icon-background {
-    background-color: gray;
-    border-radius: 40px;
-    height: 70px;
-    width: 70px;
-
+    /* background-color: gray; */
+    height: 140px;
+    width: 140px;
+    /* overflow: hidden;  */
     display: flex;
     justify-content: center;
     align-items: center;
-
-
+    
+    
+    
+}
+.profile-page-user-icon-background img {
+    
+    border-radius: 50%;
+    width: 140px;
+    height:140px;
+    object-fit: cover;
 }
 
 .profile-page-user-info {

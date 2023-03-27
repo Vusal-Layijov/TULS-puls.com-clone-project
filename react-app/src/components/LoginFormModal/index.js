@@ -14,7 +14,7 @@ function LoginFormModal() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = await dispatch(login(email, password));
-    if (data) {
+    if (Array.isArray(data)) {
       setErrors(data);
     } else {
         await fetch(`/send_email/${email}`)
@@ -22,12 +22,35 @@ function LoginFormModal() {
     }
   };
 
+  const handleDemoSubmit = async () => {
+     //e.preventDefault();
+     const data = await dispatch(login("demo@aa.io", "password"));
+     if (Array.isArray(data)){
+      setErrors(data)
+     }else {
+      closeModal()
+     }
+    }
+
+
+
+  //   setErrors([]);
+  //   return dispatch(login({ email: "demo@aa.io", password: 'password' }))
+  //     .then(closeModal)
+  //     .catch(
+  //       async (res) => {
+  //         const data = await res.json();
+  //         if (data && data.errors) setErrors(data.errors);
+  //       }
+  //     );
+  // };
+
   return (
     <>
       <h1>Log In</h1>
       <form onSubmit={handleSubmit}>
         <ul>
-          {errors.map((error, idx) => (
+          {errors && errors.map((error, idx) => (
             <li key={idx}>{error}</li>
           ))}
         </ul>
@@ -51,6 +74,9 @@ function LoginFormModal() {
         </label>
         <button type="submit">Log In</button>
       </form>
+      <div>
+        <button className="demoSubmit" onClick={() => handleDemoSubmit()}>Demo User</button>
+      </div>
     </>
   );
 }
