@@ -43,13 +43,13 @@ function Navigation({ isLoaded }){
 				<option value='phone'>Phone repair</option>
 			</select>
 
-			<NavLink to={'/membership'} >Membership</NavLink>
+			<NavLink style={{textDecoration:'none', color:'black'}} to={'/membership'} >Membership</NavLink>
 
-			<div style={{ paddingBottom: '5px', marginRight: '25px', display: 'flex', alignItems: 'center' }}>
+			<div style={{ marginRight: '25px', display: 'flex', alignItems: 'center', }}>
 
 				{sessionUser && (
 					<>
-						<NavLink to="/services/new" style={{ color: 'red' }} >Become a tulser</NavLink>
+						<NavLink to="/services/new" style={{ textDecoration: 'none', color: 'black', width: '100px' }} >Be a Tulser</NavLink>
 					</>
 				)}
 			</div>

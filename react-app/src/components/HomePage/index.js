@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import homepage from './qaqa.png'
 import cnbc from './cnbc.png'
-
+import './index.css'
 const HomePage = () =>{
     const dispatch = useDispatch()
 

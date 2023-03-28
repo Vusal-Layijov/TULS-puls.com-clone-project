@@ -14,3 +14,33 @@
     object-fit: cover;
     object-position: center;
 }
+
+
+#homePage-previewImage p {
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(24, 22, 22);
+    /* text-align: center; */
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+/* Styling for the NavLink button */
+#homePage-previewImage a button{
+    display: inline-block;
+    background-color: #1481ef;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    margin-left: 100px;
+}
+
+#homePage-previewImage a button:hover {
+    background-color: #fff;
+    color: #0990ea;
+    border: 2px solid #1a8edc;
+}

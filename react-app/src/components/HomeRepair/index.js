@@ -31,14 +31,16 @@ export default function HomeRepair() {
                     return (
                         <div key={service.id} className='forNew'>
                             <div className="spotclass">
-                                <h1>{service.name}</h1>
+                                <h2>{service.name}</h2>
                                 <p>By: {service.owner.username}</p>
                             </div>
                             <div className="forinside">
-                                {service.desciption}
+                                {service.description}
                             </div>
+                            <div className="priceandavg">
                             <div>{service.avgRating ? `⭐️ ${parseFloat(service.avgRating).toFixed(1)}` : '⭐️ New'}</div>
                             <p>Price {service.price}$</p>
+                            </div>
                             {user ? (service.ownerId == user.id ? null : <NavLink to={`/services/${service.id}/bookings/new`} >Book</NavLink>) : null
                             }
                         </div>

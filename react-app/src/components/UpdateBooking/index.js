@@ -4,7 +4,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import { authenticate } from '../../store/session';
 import { update_booking_thunk } from "../../store/bookings";
 import { get_bookings_thunk } from "../../store/bookings";
-
+import './index.css'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -80,23 +80,28 @@ export function UpdateBooking(){
 
     return(
         <>
-            <form style={{ paddingTop: '100px' }} onSubmit={onSubmit} >
-                <label>
+            <form className="update-booking-form" onSubmit={onSubmit} >
+                <h2>Update Your booking</h2>
+                <label className="dateid" >
                     Date: <span className="validationErrors" >{validationErrors.date}</span>
                     <DatePicker selected={formData.date} onChange={handleDateChange}  />
                 </label>
+                <br />
                 <label>
                     Update your address:<span className="validationErrors" >{validationErrors.address}</span>
                     <input type="text" name="address" value={formData.address} onChange={handleChange} />
                 </label>
+                <br />
                 <label>
                     Update city:<span className="validationErrors" >{validationErrors.city}</span>
                     <input type="text" name="city" value={formData.city} onChange={handleChange} />
                 </label>
+                <br />
                 <label>
                     Update Notes:
                     <textarea name="notes" value={formData.notes} onChange={handleChange} />
                 </label>
+                <br />
                 <button type="submit" >Submit</button>
             </form>        
         </>

@@ -42,8 +42,8 @@ function SignupFormModal() {
 
 	return (
 		<>
-			<h1>Sign Up</h1>
-			<form onSubmit={handleSubmit} encType="multipart/form-data" >
+			<h1 className="mainh" >Sign Up</h1>
+			<form className="mainform" onSubmit={handleSubmit} encType="multipart/form-data" >
 				<ul>
 					{errors.map((error, idx) => (
 						<li key={idx}>{error}</li>
@@ -67,6 +67,8 @@ function SignupFormModal() {
 						required
 					/>
 				</label>
+				<input id="image" type="file" accept="image/*" onChange={(e) => setImage(e.target.files[0])}  >
+				</input>
 				<label>
 					Password
 					<input
@@ -76,8 +78,6 @@ function SignupFormModal() {
 						required
 					/>
 				</label>
-				<input id="image" type="file" accept="image/*" onChange={(e) => setImage(e.target.files[0])}  >
-				</input>
 				<label>
 					Confirm Password
 					<input

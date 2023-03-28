@@ -83,7 +83,7 @@ export default function ServiceGrid(){
             </div>
             <div class="card" value="homerepair" onClick={handleClick}>
                 <img value="homerepair" src={homerepair} alt="Homerepair" />
-                <h2 value="homerepair">Smart Home</h2>
+                <h2 value="homerepair">Home Repair</h2>
             </div>
             <div class="card" value="phone" onClick={handleClick}>
                 <img value="phone" src={phone} alt="Phone" />

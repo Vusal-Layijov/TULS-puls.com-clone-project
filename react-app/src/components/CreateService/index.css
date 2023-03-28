@@ -1,11 +1,12 @@
 /* Styles for the overall form container */
-.create-business-form {
+.create-service-form {
     max-width: 600px;
     margin: 0 auto;
 }
 
+
 /* Styles for the form h1 element */
-#create-business-h1-container {
+#create-service-h1-container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -38,29 +39,22 @@
 }
 
 /* Styles for the checkbox container */
-#create-business-categories {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-}
+
 
 /* Styles for the checkbox */
-#create-business-categories input {
-    margin-right: 10px
-}
+
 
 .create-business-form__checkbox input[type="checkbox"] {
     margin-right: 5px;
 }
 
 /* Styles for the submit button */
-#create-business-submit {
+#create-service-submit {
     margin: 40px 0 150px 0;
 }
 
-#create-business-submit button {
-    background-color: rgba(224, 7, 7, 1);
+#create-service-submit button {
+    background-color: rgb(25, 110, 237);
     ;
     color: white;
     padding: 10px 20px;
@@ -71,39 +65,34 @@
 }
 
 /* Styles for the header */
-.create-business-form h1 {
+.create-service-form h1 {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 /* Styles for the preview photo input */
-.create-business-form h3 {
+.create-service-form h3 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.create-business-form p {
+.create-service-form p {
     margin-bottom: 10px;
 }
 
-.create-business-form input[name="previewPhoto"] {
-    margin-bottom: 20px;
-}
+
 
 /* Styles for invalid form errors */
 
 .validationErrors {
     color: red;
 }/* Styles for the overall form container */
-.create-business-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
+
 
 /* Styles for the form h1 element */
-#create-business-h1-container {
+#create-service-h1-container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -111,8 +100,8 @@
 }
 
 /* Styles for each individual input group */
-.create-business-form div {
-    margin-bottom: 20px;
+.create-service-form div {
+    margin-bottom: 10px;
 }
 
 /* Styles for the labels */
@@ -122,76 +111,3 @@
     margin-bottom: 10px;
 }
 
-/* Styles for the text inputs */
-.create-business-form input[type="text"],
-.create-business-form input[type="number"],
-.create-business-form select,
-.create-business-form textarea {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-/* Styles for the checkbox container */
-#create-business-categories {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-}
-
-/* Styles for the checkbox */
-#create-business-categories input {
-    margin-right: 10px
-}
-
-.create-business-form__checkbox input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-/* Styles for the submit button */
-#create-business-submit {
-    margin: 40px 0 150px 0;
-}
-
-#create-business-submit button {
-    background-color: rgba(224, 7, 7, 1);
-    ;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* Styles for the header */
-.create-business-form h1 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Styles for the preview photo input */
-.create-business-form h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.create-business-form p {
-    margin-bottom: 10px;
-}
-
-.create-business-form input[name="previewPhoto"] {
-    margin-bottom: 20px;
-}
-
-/* Styles for invalid form errors */
-
-.validationErrors {
-    color: red;
-}

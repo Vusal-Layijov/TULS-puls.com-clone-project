@@ -1,0 +1,56 @@
+.create-booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 80px;
+    
+    border-radius: 10px;
+}
+
+.create-booking-form h2 {
+    font-size: 24px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.create-booking-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.create-booking-form input[type="text"],
+.create-booking-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.dateid {
+    width: 30%;
+}
+.create-booking-form input[type="text"]:focus,
+.create-booking-form textarea:focus {
+    outline: none;
+    border-color: #4285f4;
+}
+
+.create-booking-form button[type="submit"] {
+    background-color: #4285f4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 255px;
+}
+
+.create-booking-form button[type="submit"]:hover {
+    background-color: #357ae8;
+}
+
+.validationErrors {
+    color: red;
+    margin-left: 10px;
+}

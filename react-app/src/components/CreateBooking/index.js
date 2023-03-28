@@ -79,9 +79,11 @@ export default function CreateBooking() {
     };
 
     return (
-
-        <form style={{paddingTop:'100px'}} onSubmit={onSubmit}>
-            <label>
+        <>
+    
+        <form className="create-booking-form" style={{paddingTop:'50px'}} onSubmit={onSubmit}>
+            <h2>Create a new booking</h2>
+            <label className="dateid" >
                 Date:<span className="validationErrors" >{validationErrors.date}</span>
                 <DatePicker
                     selected={formData.date}
@@ -105,5 +107,7 @@ export default function CreateBooking() {
             <br />
             <button type="submit">Submit</button>
         </form>
+     
+        </>
     );
 }

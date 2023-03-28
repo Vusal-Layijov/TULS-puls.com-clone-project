@@ -71,7 +71,7 @@ export default function CreateService(){
     return (
         <>
             <form className="create-service-form" onSubmit={onSubmit} >
-                <div id="create-business-h1-container"><h1>Create a New Service on Tuls</h1></div>
+                <div id="create-service-h1-container"><h1>Create a New Service on Tuls</h1></div>
                 <div>
                     <label>
                         What is the name of your service ? <span className="validationErrors" >{validationErrors.name}</span>
@@ -171,7 +171,7 @@ export default function CreateService(){
                         </input>
                     </label>
                 </div>
-                <div id="create-business-submit">
+                <div id="create-service-submit">
                     <button type="submit">Submit</button>
                 </div>
             </form>

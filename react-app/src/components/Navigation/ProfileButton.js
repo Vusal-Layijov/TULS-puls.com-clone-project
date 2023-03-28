@@ -49,9 +49,9 @@ function ProfileButton({ user }) {
       <ul className={ulClassName} ref={ulRef}>
         {user ? (
           <>
-            <li><NavLink to={`/users/${user.id}`} >My dashboard</NavLink> </li>
+            <li ><NavLink to={`/users/${user.id}`} id='aid' >My dashboard</NavLink> </li>
             <li>
-              <button onClick={handleLogout}>Log Out</button>
+              <button className="globalmodal" onClick={handleLogout}>Log Out</button>
             </li>
           </>
         ) : (

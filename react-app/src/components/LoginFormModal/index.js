@@ -46,9 +46,9 @@ function LoginFormModal() {
   // };
 
   return (
-    <>
+    <div className="log-in" >
       <h1>Log In</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='log-in-form' >
         <ul>
           {errors && errors.map((error, idx) => (
             <li key={idx}>{error}</li>
@@ -61,6 +61,7 @@ function LoginFormModal() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            id='username'
           />
         </label>
         <label>
@@ -72,12 +73,12 @@ function LoginFormModal() {
             required
           />
         </label>
-        <button type="submit">Log In</button>
+        <button type="submit" id="log-in-button" >Log In</button>
       </form>
       <div>
-        <button className="demoSubmit" onClick={() => handleDemoSubmit()}>Demo User</button>
+        <button id='log-in-demo-user' className="curs" onClick={() => handleDemoSubmit()}>Demo User</button>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -17,6 +17,8 @@ import UpdateService from "./components/UpdateService";
 import CreateBooking from "./components/CreateBooking";
 import { UpdateBooking } from "./components/UpdateBooking";
 import ServiceGrid from "./components/ServicesGrid";
+import Footer from "./components/Footer";
+import AboutTuls from "./components/Abouttuls";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -71,8 +73,12 @@ function App() {
           <Route exact path="/users/:userId/" >
             <UserProfilePage />
           </Route>
+          <Route path={'/about'} >
+            <AboutTuls />
+          </Route>
         </Switch>
       )}
+      <Footer />
     </>
   );
 }
