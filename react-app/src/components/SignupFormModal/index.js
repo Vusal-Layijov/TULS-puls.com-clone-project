@@ -80,8 +80,11 @@ function SignupFormModal() {
 						required
 					/>
 				</label>
+				<label>
+				Image
 				<input id="image" type="file" accept="image/*" onChange={(e) => setImage(e.target.files[0])}  >
 				</input>
+				</label>
 				<label>
 					Password
 					<input

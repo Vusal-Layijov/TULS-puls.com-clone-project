@@ -27,10 +27,10 @@ function Navigation({ isLoaded }){
 			<div id="logo-container">
 				<NavLink style={{ marginLeft: '80px' }} exact to="/">
 					<img
-						src={logo}
+						src="https://i.imgur.com/pNtrbuo.png"
 						alt="logo"
 						id="logo-image"
-						style={{width:'70px',height:'45px'}}
+						style={{width:'50px',height:'45px'}}
 					/>
 				</NavLink>
 				

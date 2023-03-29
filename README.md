@@ -2,7 +2,7 @@
 
 ## About The Project
 
-TULS, is a puls.com close. Users can use website to create service, also book service, users can join memberships. Also can add review to the service. With using AWS S3 buckets user can upload profile picture, enjoj search functionality, can get email notification once logged in or signed up.
+TULS, is a puls.com clone. Users can use website to create service, also book service, users can join memberships. Also can add review to the service. With using AWS S3 buckets user can upload profile picture, enjoj search functionality, can get email notification once logged in or signed up.
 
 
 ## Built With
