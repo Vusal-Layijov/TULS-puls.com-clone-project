@@ -50,6 +50,7 @@ export default function Membership () {
                         benefits='Basic access to all services'
                         extraBenefits='Access to community forum'
                         moreBenefits={bronzeBenefits}
+                        id={1}
                     />
                     <MembershipOp
                         type='Silver'
@@ -57,6 +58,7 @@ export default function Membership () {
                         benefits='Unlimited access to all services'
                         extraBenefits='Dedicated account manager'
                         moreBenefits={silverBenefits}
+                        id={2}
                     />
                     <MembershipOp
                         type='Gold'
@@ -64,6 +66,7 @@ export default function Membership () {
                         benefits='Unlimited access to all services, priority support'
                         extraBenefits='Custom analytics dashboard'
                         moreBenefits={goldBenefits}
+                        id={3}
                     />
                 </div>
         </section>

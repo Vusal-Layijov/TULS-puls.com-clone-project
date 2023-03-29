@@ -20,12 +20,14 @@ function SignupFormModal() {
 		if(!email.includes('@')) errors.push('Provide correct email')
 		if(username.length<4) errors.push('Username must be more than 4 characters')
 		if(password.length<4) errors.push('Password must be more than 4 characters')
+		if(!image) errors.push('Image is required')
 		setErrors(errors)
-	}, [email,username,password])
+	}, [email,username,password,image])
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setHasSubmitted(true)
+		if(errors.length) return
 		if (password === confirmPassword) {
 			// #for image
 			const formData = new FormData()

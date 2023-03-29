@@ -1,5 +1,6 @@
 import './index.css'
-const MembershipOp = ({ type, price, benefits, extraBenefits, moreBenefits }) => {
+import { NavLink } from 'react-router-dom';
+const MembershipOp = ({ type, price, benefits, extraBenefits, moreBenefits, id }) => {
     return (
         <div className="membership">
             <h2>{type} Membership</h2>
@@ -13,7 +14,7 @@ const MembershipOp = ({ type, price, benefits, extraBenefits, moreBenefits }) =>
                     </li>
                 ))}
             </ul>
-            <button className="join-button">Join</button>
+              <button className="join-button">Join</button>
         </div>
     );
 };

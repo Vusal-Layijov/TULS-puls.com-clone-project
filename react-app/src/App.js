@@ -20,6 +20,7 @@ import ServiceGrid from "./components/ServicesGrid";
 import Footer from "./components/Footer";
 import AboutTuls from "./components/Abouttuls";
 import Membership from "./components/Memberships";
+import JoinMembership from "./components/JoinMembership";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -77,8 +78,11 @@ function App() {
           <Route path={'/about'} >
             <AboutTuls />
           </Route>
-          <Route path={'/membership'} >
+          <Route exact path={'/membership'} >
             <Membership />
+          </Route>
+          <Route path={'/memberships/:id'} >
+            <JoinMembership />
           </Route>
         </Switch>
       )}
