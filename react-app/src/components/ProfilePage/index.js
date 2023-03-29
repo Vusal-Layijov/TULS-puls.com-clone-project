@@ -48,6 +48,7 @@ function UserProfilePage() {
             </div>
             <div className='secondmainprofile' >
                 <div className='holdingdashboard' >
+                    {((!userInfo.services[0]) && (!userInfo.bookings[0])) ? <div style={{height:'47vh'}} > </div> : null}
                     {userInfo.services[0] ? <h2>View {userInfo.username}'s Services</h2> : null}
                     <MyDashboard services={userInfo.services} /> 
                 </div>
