@@ -54,8 +54,9 @@ export default function ServiceGrid(){
                     placeholder="Search..."
                     value={value}
                     onChange={onChange}
+                    className="searchin"
                 />
-                <button onClick={() => onSearch(value)}>
+                <button className="searchinbut" onClick={() => onSearch(value)}>
                     <i className="fas fa-search"></i>
                 </button>
             </div>

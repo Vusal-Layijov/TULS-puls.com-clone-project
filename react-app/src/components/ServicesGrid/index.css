@@ -58,6 +58,23 @@
 }
 .search-inner input {
     width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.searchinbut{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 40px;
+}
+.searchinbut:hover{
+    background-color: #0069d9;
 }
 .dropdown {
     background-color:white;
