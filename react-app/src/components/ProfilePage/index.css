@@ -1,14 +1,15 @@
 .profile-page-user-banner {
     display: flex;
     /* background-color: rgb(216, 212, 212); */
-    width: 150px;
+    width: 170px;
+    height: 170px;
     /* justify-content: center; */
 }
 
 .profile-page-user-icon-background {
     /* background-color: gray; */
-    height: 140px;
-    width: 140px;
+    height: 165px;
+    width: 165px;
     /* overflow: hidden;  */
     display: flex;
     justify-content: center;
@@ -20,22 +21,40 @@
 .profile-page-user-icon-background img {
     
     border-radius: 50%;
-    width: 140px;
-    height:140px;
+    width: 163px;
+    height:163px;
     object-fit: cover;
 }
 
-.profile-page-user-info {
+.profile-user-info {
     display: flex;
 
     flex-direction: column;
     padding: 10px;
+    margin-left: 30px;
+    width: 250px;
 }
 
-.maindiv {
+.maindivprofile {
     display: flex;
     flex-direction: column;
     padding-left: 100px;
     padding-right: 100px;
-    padding-top: 100px;
+    padding-top: 50px;
+}
+
+.holdingimage{
+    margin: 0 auto;
+}
+
+.secondmainprofile {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+.holdingdashboard{
+    width: 400px;
+}
+.holdingbookings{
+    width: 400px;
 }

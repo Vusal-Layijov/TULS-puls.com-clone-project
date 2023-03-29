@@ -81,7 +81,7 @@ export function UpdateBooking(){
     return(
         <>
             <form className="update-booking-form" onSubmit={onSubmit} >
-                <h2>Update Your booking</h2>
+                <h2>Update Your booking with {currentBooking.service} </h2>
                 <label className="dateid" >
                     Date: <span className="validationErrors" >{validationErrors.date}</span>
                     <DatePicker selected={formData.date} onChange={handleDateChange}  />

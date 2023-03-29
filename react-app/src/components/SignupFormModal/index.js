@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useModal } from "../../context/Modal";
 import { signUp } from "../../store/session";
@@ -12,10 +12,20 @@ function SignupFormModal() {
 	const [confirmPassword, setConfirmPassword] = useState("");
 	const [image, setImage] = useState('')
 	const [errors, setErrors] = useState([]);
+	const [hassubmitted, setHasSubmitted] = useState(false)
 	const { closeModal } = useModal();
+
+	useEffect(() =>{
+		let errors = []
+		if(!email.includes('@')) errors.push('Provide correct email')
+		if(username.length<4) errors.push('Username must be more than 4 characters')
+		if(password.length<4) errors.push('Password must be more than 4 characters')
+		setErrors(errors)
+	}, [email,username,password])
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+		setHasSubmitted(true)
 		if (password === confirmPassword) {
 			// #for image
 			const formData = new FormData()
@@ -38,6 +48,9 @@ function SignupFormModal() {
 				"Confirm Password field must be the same as the Password field",
 			]);
 		}
+		// setEmail('')
+		// setUsername('')s
+		// setPassword('')
 	};
 
 	return (
@@ -45,7 +58,7 @@ function SignupFormModal() {
 			<h1 className="mainh" >Sign Up</h1>
 			<form className="mainform" onSubmit={handleSubmit} encType="multipart/form-data" >
 				<ul>
-					{errors.map((error, idx) => (
+					{hassubmitted && errors.length>0 && errors.map((error, idx) => (
 						<li key={idx}>{error}</li>
 					))}
 				</ul>
@@ -87,7 +100,7 @@ function SignupFormModal() {
 						required
 					/>
 				</label>
-				<button type="submit">Sign Up</button>
+				<button  type="submit">Sign Up</button>
 			</form>
 		</>
 	);

@@ -22,7 +22,7 @@ export default function PhoneRepair() {
                 <div id='homePage-previewImage' style={{ backgroundImage: `url(${cleaner})`, backgroundSize: 'cover', height: '85vh' }}>
                     {/* <div style={{ paddingTop: '100px' }}>
                 </div> */}
-                <h1 style={{paddingTop:'100px'}}>Trusted Repair at your location</h1>
+                <h1 style={{paddingTop:'60px'}}>Trusted Repair at your location</h1>
                 </div>
             </section>
 

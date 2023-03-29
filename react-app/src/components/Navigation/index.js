@@ -23,6 +23,7 @@ function Navigation({ isLoaded }){
 	}
 	return (
 		<div className='homePageNav' >
+			<div className='nav2' >
 			<div id="logo-container">
 				<NavLink style={{ marginLeft: '80px' }} exact to="/">
 					<img
@@ -49,19 +50,15 @@ function Navigation({ isLoaded }){
 
 				{sessionUser && (
 					<>
-						<NavLink to="/services/new" style={{ textDecoration: 'none', color: 'black', width: '100px' }} >Be a Tulser</NavLink>
+						<NavLink to="/services/new" style={{ textDecoration: 'none', color: 'black' }} >Become A Tulser</NavLink>
 					</>
 				)}
 			</div>
-
+			</div>
 			{isLoaded && (
-				<div className='navStyle'>
-
-
 					<div className='navbar-profile'>
-						<ProfileButton className='navbar-profile' user={sessionUser} />
+						<ProfileButton user={sessionUser} />
 					</div>
-				</div>
 			)}
 		</div>
 	);

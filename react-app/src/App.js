@@ -19,6 +19,7 @@ import { UpdateBooking } from "./components/UpdateBooking";
 import ServiceGrid from "./components/ServicesGrid";
 import Footer from "./components/Footer";
 import AboutTuls from "./components/Abouttuls";
+import Membership from "./components/Memberships";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -75,6 +76,9 @@ function App() {
           </Route>
           <Route path={'/about'} >
             <AboutTuls />
+          </Route>
+          <Route path={'/membership'} >
+            <Membership />
           </Route>
         </Switch>
       )}

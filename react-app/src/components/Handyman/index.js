@@ -19,10 +19,17 @@ export default function Handyman() {
 
     return (
         <>
-            <section>
+            {/* <section>
                 <div id='homePage-previewImage' style={{ backgroundImage: `url(${service2})`, backgroundSize: 'cover', height: '22vh' ,marginLeft:'80px'}}>
-                    {/* <div style={{ paddingTop: '100px' }}>
-                </div> */}
+               
+                </div>
+            </section> */}
+            <section>
+                <div className="h1div" >
+                    <h1>
+                       Handyman services made simple
+                    </h1>
+                    <p>Book a service in seconds with our tecs</p>
                 </div>
             </section>
             <section>

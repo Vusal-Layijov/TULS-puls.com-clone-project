@@ -1,0 +1,8 @@
+.forbook {
+    padding-bottom: 0.5em;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    gap: 10px;
+}

@@ -1,0 +1,65 @@
+.membership-options {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.membership {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+}
+
+.membership h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+ul {
+    margin: 20px 0;
+    padding: 0;
+    text-align: left;
+}
+
+li {
+    list-style-type: disc;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.join-button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: #0069d9;
+}
+.plansbut{
+    margin-left: 150px;
+    height: 50px;
+    width: 200px;  
+    background-color: #007bff;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 22px;
+    transition: background-color 0.3s ease;
+
+}

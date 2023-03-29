@@ -37,6 +37,7 @@
     font-weight: bold;
     transition: all 0.3s ease-in-out;
     margin-left: 100px;
+    cursor: pointer;
 }
 
 #homePage-previewImage a button:hover {

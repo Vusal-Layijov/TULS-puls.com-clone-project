@@ -31,27 +31,28 @@ function UserProfilePage() {
         history.push('/')
     }
     return (
-        <div className='maindiv'>
+        <div className='maindivprofile'>
 
-            <div>
+            <div className='holdingimage' >
                 <h1>Welcome to {userInfo.username}'s Page</h1>
                 <div class="profile-page-user-banner">
                     <div class="profile-page-user-icon-background" >
                         <img src={userInfo.image} alt="profile img" ></img>
                     </div>
-                    <div class="profile-page-user-info">
+                    <div class="profile-user-info">
                         <p>Username: {userInfo.username}</p>
                         <p>Email: {userInfo.email}</p>
                     </div>
 
                 </div>
             </div>
-            <div style={{display:'flex'}} >
-                <div>
-                    <h2>View {userInfo.username}'s Services</h2>
+            <div className='secondmainprofile' >
+                <div className='holdingdashboard' >
+                    {userInfo.services[0] ? <h2>View {userInfo.username}'s Services</h2> : null}
                     <MyDashboard services={userInfo.services} /> 
                 </div>
-                <div>
+                <div className='holdingbookings' >
+                    {userInfo.bookings[0] ? <h2>View {userInfo.username}'s Bookings</h2> : null}
                     <MyBookings user={userInfo} />
                 </div>
             </div>
