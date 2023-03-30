@@ -32,12 +32,14 @@ class User(db.Model, UserMixin):
         return check_password_hash(self.password, password)
 
     def to_dict(self):
-        return {
+        user_dict = {
             'id': self.id,
             'username': self.username,
             'email': self.email,
-            'membership':self.membership_id,
             'image':self.image,
             'bookings':[{'id':booking.id,"address":booking.address,"city":booking.city, 'service_id':booking.service_id,'date':booking.date,'notes':booking.notes,'service':booking.service.name} for booking in self.bookings],
             'services':[service.to_dict_without() for service in self.services]
         }
+        if self.membership is not None:
+            user_dict['membership'] = self.membership.to_dict()
+        return user_dict

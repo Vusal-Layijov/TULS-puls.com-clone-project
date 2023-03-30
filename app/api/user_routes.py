@@ -1,6 +1,6 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify,request
 from flask_login import login_required,current_user
-from app.models import User,Service
+from app.models import User,Service,db
 
 user_routes = Blueprint('users', __name__)
 
@@ -32,3 +32,14 @@ def current_user_services(userId):
     servvie_dict= [service.to_dict() for service in allservices]
 
     return jsonify({"servicess":servvie_dict})
+
+@user_routes.route('/<int:id>', methods=["PUT"])
+@login_required
+def update_user(id):
+    user= User.query.get(id)
+    data= request.get_json()
+    print('dattttatatataatat', data)
+    user.membership_id=data
+    db.session.commit()
+    return user.to_dict()
+    

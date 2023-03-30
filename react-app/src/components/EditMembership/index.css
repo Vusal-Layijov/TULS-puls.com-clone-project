@@ -1,0 +1,11 @@
+.editmem{
+    width: 310px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: rgb(169, 177, 56);
+    text-align: center;
+}
