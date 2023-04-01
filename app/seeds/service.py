@@ -57,8 +57,28 @@ def seed_services():
         city='Los Angeles',
         state='CA'
     )
+    service6 = Service(
+        name='Home services by Loli',
+        description='Outdorr, busines, home services for home and businesses',
+        price=140.0,
+        availability=True,
+        owner_id=4,
+        service_type_id=1,
+        city='Los Angeles',
+        state='CA'
+    )
+    service7 = Service(
+        name='Tv mounting by Loli',
+        description='Outdorr, busines, home Tv services for home and businesses',
+        price=130.0,
+        availability=True,
+        owner_id=4,
+        service_type_id=5,
+        city='Los Angeles',
+        state='CA'
+    )
     # Add the businesses to the database
-    db.session.add_all([service1,service2,service3,service4,service5])
+    db.session.add_all([service1,service2,service3,service4,service5,service6,service7])
     db.session.commit()
 
 

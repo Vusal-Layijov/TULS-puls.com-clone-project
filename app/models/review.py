@@ -32,4 +32,7 @@ class Review(db.Model):
             'review':self.review,
             'created_at':self.created_at,
             'updated_at':self.updated_at,
+            'userImage':self.user.image,
+            'userName':self.user.username,
+            "serviceName":self.service.name
         }

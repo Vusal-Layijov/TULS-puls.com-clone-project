@@ -38,8 +38,26 @@ def seed_reviews():
         stars=4,
         review="The job was great, they came lkittle wait but I dont want give low review "
     )
+    review7 = Review(
+        user_id=2,
+        service_id=1,
+        stars=3,
+        review="The cleaning was excellent, and the service was great too. Higly recommended!"
+    )
+    review8 = Review(
+        user_id=2,
+        service_id=1,
+        stars=5,
+        review="The cleaning was excellent, and the service was great too. Higly recommended!, The cleaning was excellent, and the service was great too. Higly recommended!Just I will order again so happy for service , my friends also liked it , I am so glad........."
+    )
+    review9 = Review(
+        user_id=2,
+        service_id=7,
+        stars=4,
+        review="The tv mounting was excellent, and the service was great too. Higly recommended!, The cleaning was excellent, and the service was great too. Higly recommended!Just I will order again so happy for service , my friends also liked it , I am so glad........."
+    )
 
-    db.session.add_all([review1,review2,review3,review4,review5,review6])
+    db.session.add_all([review1,review2,review3,review4,review5,review6, review7, review8, review9])
     db.session.commit()
 def undo_reviews():
     if environment == "production":

@@ -4,12 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { load_services_thunk } from "../../store/services";
 import cleaner from './phone3.png'
 import './index.css'
+import { get_reviews_thunk } from "../../store/review";
 export default function PhoneRepair() {
     const dispatch = useDispatch()
     const services = useSelector(state => Object.values(state.services.all_services))
     const user = useSelector((state => state.session.user))
     useEffect(() => {
         dispatch(load_services_thunk(4))
+        dispatch(get_reviews_thunk(4))
     }, [dispatch])
 
     if (!services) {

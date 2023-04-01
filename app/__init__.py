@@ -9,6 +9,8 @@ from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
 from .api.serviceroutes import service_routes
 from .api.booking_routes import booking_routes
+from .api.reviewroutes import review_routes
+
 from .seeds import seed_commands
 from .config import Config
 from flask_mail import Mail, Message
@@ -44,6 +46,7 @@ app.register_blueprint(user_routes, url_prefix='/api/users')
 app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(service_routes, url_prefix='/api/services')
 app.register_blueprint(booking_routes, url_prefix='/api/bookings')
+app.register_blueprint(review_routes, url_prefix='/api/reviews')
 
 @app.route('/react-app/src/components/Tvmount/tvmount.mp4')
 def video():

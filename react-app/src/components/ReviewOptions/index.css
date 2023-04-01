@@ -1,0 +1,20 @@
+.hidden {
+    display: none;
+}
+.button-container {
+    position: relative;
+}
+.button-container:hover{
+    cursor: pointer;
+}
+.drop-menu{
+    width: 140px;  
+    padding: 0px;
+    right: 0px;
+}
+.options-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

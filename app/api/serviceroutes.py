@@ -1,8 +1,8 @@
 from flask import Blueprint, jsonify, request, redirect
 from flask_login import login_required, current_user
 from sqlalchemy import func
-from app.models import Service, ServiceType, Booking, db
-from app.forms import ServiceForm
+from app.models import Service, ServiceType, Booking,Review, db
+from app.forms import ServiceForm, ReviewForm
 
 
 service_routes=Blueprint('services', __name__)
@@ -75,3 +75,22 @@ def get_services_bookings(id):
     service=Service.query.get(id)
     bookings=[booking.to_dict() for booking in service.bookings]
     return jsonify({'bookings':bookings})
+
+
+
+@service_routes.route('/<int:id>/reviews', methods=["POST"])
+@login_required
+def create_review(id):
+    form = ReviewForm()
+    form["csrf_token"].data = request.cookies["csrf_token"]
+    if form.validate_on_submit():
+        new_review=Review(
+            review=form.review.data,
+            stars=form.stars.data,
+            user_id=current_user.id,
+            service_id=id
+        )
+        db.session.add(new_review)
+        db.session.commit()
+        return new_review.to_dict()
+    return jsonify({'message':'unsuccesfull'})

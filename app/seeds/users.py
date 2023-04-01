@@ -10,10 +10,11 @@ def seed_users():
         username='marnie', email='marnie@aa.io', password='password', image="http://photos.demandstudios.com/getty/article/240/28/80510142.jpg")
     bobbie = User(
         username='bobbie', email='bobbie@aa.io', password='password',membership_id=3, image="https://richmondcc.edu/sites/default/files/public/Photos/electronics_engineering_technicianhd.jpg")
-
+    loli=User(username="Loli", email="loli@gmail.com",password="password",image="https://intellitec.edu/wp-content/uploads/2018/04/EverythingComputerSystemesTech.jpg")
     db.session.add(demo)
     db.session.add(marnie)
     db.session.add(bobbie)
+    db.session.add(loli)
     db.session.commit()
 
 

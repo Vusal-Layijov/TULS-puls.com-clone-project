@@ -3,6 +3,7 @@ import { useHistory,NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { load_services_thunk } from "../../store/services";
 import cleaner from './homerepair.jpg'
+import { get_reviews_thunk } from "../../store/review";
 import './index.css'
 export default function HomeRepair() {
     const dispatch = useDispatch()
@@ -10,6 +11,7 @@ export default function HomeRepair() {
     const user = useSelector((state => state.session.user))
     useEffect(() => {
         dispatch(load_services_thunk(2))
+        dispatch(get_reviews_thunk(2))
     }, [dispatch])
 
     if (!services) {

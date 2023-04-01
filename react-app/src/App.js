@@ -21,6 +21,7 @@ import Footer from "./components/Footer";
 import AboutTuls from "./components/Abouttuls";
 import Membership from "./components/Memberships";
 import JoinMembership from "./components/JoinMembership";
+import CreateReview from "./components/CreateReview/review";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -53,6 +54,9 @@ function App() {
           </Route>
           <Route exact path={'/services/:id/bookings/new'} >
             <CreateBooking />
+          </Route>
+          <Route exact path={'/services/:id/reviews/new'} >
+            <CreateReview />
           </Route>
           <Route path={'/services/tvmounting'}>
             <TvMount />

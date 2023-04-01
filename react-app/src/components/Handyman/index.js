@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useHistory, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { load_services_thunk } from "../../store/services";
+import { get_reviews_thunk } from "../../store/review";
 import cleaner from './handy3.png'
 import service2 from './service3.png'
 import './index.css'
@@ -11,6 +12,7 @@ export default function Handyman() {
     const user = useSelector((state => state.session.user))
     useEffect(() => {
         dispatch(load_services_thunk(3))
+        dispatch(get_reviews_thunk(3))
     }, [dispatch])
 
     if (!services) {
