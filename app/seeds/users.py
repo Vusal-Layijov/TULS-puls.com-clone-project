@@ -11,10 +11,14 @@ def seed_users():
     bobbie = User(
         username='bobbie', email='bobbie@aa.io', password='password',membership_id=3, image="https://richmondcc.edu/sites/default/files/public/Photos/electronics_engineering_technicianhd.jpg")
     loli=User(username="Loli", email="loli@gmail.com",password="password",image="https://intellitec.edu/wp-content/uploads/2018/04/EverythingComputerSystemesTech.jpg")
+    qaqa=User(username="Qaqa Hamza", email="qaqa@gmail.com", password="password", image="https://images.wisegeek.com/computer-technician.jpg")
+    maqa=User(username="Maqa Eliyev",email="maqa@gmail.com", password="password",image="https://afterhoursheatandcool.com/wp-content/uploads/2019/10/commercial-hvac-repair-technician.jpg")
     db.session.add(demo)
     db.session.add(marnie)
     db.session.add(bobbie)
     db.session.add(loli)
+    db.session.add(qaqa)
+    db.session.add(maqa)
     db.session.commit()
 
 

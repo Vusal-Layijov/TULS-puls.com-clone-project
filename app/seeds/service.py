@@ -77,8 +77,138 @@ def seed_services():
         city='Los Angeles',
         state='CA'
     )
+    service8 = Service(
+        name='The Home',
+        description='Home  services very professinal, We design home, built from scratch',
+        price=120.0,
+        availability=True,
+        owner_id=4,
+        service_type_id=2,
+        city='Los Angeles',
+        state='CA'
+    )
+    service9 = Service(
+        name='The HANDY',
+        description='Appliance, sink and everything.Home  services very professinal, built from scratch',
+        price=110.0,
+        availability=True,
+        owner_id=4,
+        service_type_id=3,
+        city='Los Angeles',
+        state='CA'
+    )
+    service10 = Service(
+        name='Tv Phonee',
+        description='Phone and electronical  services very professinal.',
+        price=120.0,
+        availability=True,
+        owner_id=4,
+        service_type_id=4,
+        city='Los Angeles',
+        state='CA'
+    )
+    service11 = Service(
+        name='We clean',
+        description='Home cleaning services very professinal',
+        price=50.0,
+        availability=True,
+        owner_id=5,
+        service_type_id=1,
+        city='Los Angeles',
+        state='CA'
+    )
+    service12 = Service(
+        name='We repair',
+        description='Home repair services very professinal',
+        price=440.0,
+        availability=True,
+        owner_id=5,
+        service_type_id=2,
+        city='Los Angeles',
+        state='CA'
+    )
+    service13 = Service(
+        name='We Handy',
+        description='Home handyman services very professinal',
+        price=60.0,
+        availability=True,
+        owner_id=5,
+        service_type_id=3,
+        city='Los Angeles',
+        state='CA'
+    )
+    service14 = Service(
+        name='We Repair',
+        description='Phone repair services very professinal, done in second',
+        price=67.0,
+        availability=True,
+        owner_id=5,
+        service_type_id=4,
+        city='Los Angeles',
+        state='CA'
+    )
+    service15 = Service(
+        name='Tv clean',
+        description='Tv mounting services very professinal',
+        price=90.0,
+        availability=True,
+        owner_id=5,
+        service_type_id=5,
+        city='Los Angeles',
+        state='CA'
+    )
+    service16 = Service(
+        name='Tv DO',
+        description='Tv mounting services very professinal, done in seconds',
+        price=99.0,
+        availability=True,
+        owner_id=6,
+        service_type_id=5,
+        city='Los Angeles',
+        state='CA'
+    )
+    service17 = Service(
+        name='Run Repair',
+        description='Your phone is our phone, Phone repair services very professinal, done in second',
+        price=57.0,
+        availability=True,
+        owner_id=6,
+        service_type_id=4,
+        city='Los Angeles',
+        state='CA'
+    )
+    service18 = Service(
+        name='Run Handy',
+        description='Your home our home. Home handyman services very professinal',
+        price=70.0,
+        availability=True,
+        owner_id=6,
+        service_type_id=3,
+        city='Los Angeles',
+        state='CA'
+    )
+    service19 = Service(
+        name='Run repair',
+        description='Everything by us.Home repair services very professinal',
+        price=340.0,
+        availability=True,
+        owner_id=6,
+        service_type_id=2,
+        city='Los Angeles',
+        state='CA'
+    )
+    service20 = Service(
+        name='Run clean',
+        description='We run ...Home cleaning services very professinal',
+        price=70.0,
+        availability=True,
+        owner_id=6,
+        service_type_id=1,
+        city='Los Angeles',
+        state='CA'
+    )
     # Add the businesses to the database
-    db.session.add_all([service1,service2,service3,service4,service5,service6,service7])
+    db.session.add_all([service1,service2,service3,service4,service5,service6,service7,service8,service10,service11,service12,service13,service14,service15,service9,service16,service17,service18,service19,service20])
     db.session.commit()
 
 
