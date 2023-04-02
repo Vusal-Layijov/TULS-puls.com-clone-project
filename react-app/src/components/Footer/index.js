@@ -5,9 +5,8 @@ import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 export default function Footer() {
     const location = useLocation()
-    const userId = useParams()
     let user=useSelector(state => state.session.user)
-    console.log('my currrebbbbbbb', location, userId)
+ 
     return (
         <footer className={location.pathname ===`/users/${user?.id}` ? "hidden" :''} > 
             <div className='footerdiv' > 

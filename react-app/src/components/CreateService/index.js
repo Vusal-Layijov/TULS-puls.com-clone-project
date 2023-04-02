@@ -48,16 +48,15 @@ export default function CreateService(){
             service_type_id
         }
         const errors = {}
-        if (!newService.name.length) errors.name='Name is required'
-        if (!newService.description.length) errors.description='Description is required'
+        if (!newService.name.length) errors.name='Name can not be empty'
+        if (newService.description.length<30) errors.description='Description needs at least 30 character long'
         if (!newService.price) errors.price='Price is required'
-        if (!newService.city) errors.city='City is required'
+        if (!newService.city) errors.city='City must present'
         if (!newService.state.toString().length) errors.state = 'State is required';
         if(!service_type_id) errors.service_type_id='Service type is required'
 
         if(!Object.values(errors).length){
             let mynewservice = await dispatch(create_service_thunk(newService))
-            console.log('serviceeeeeeeeeeeeeeee',mynewservice)
             if (mynewservice){
                 await dispatch(authenticate())
                 history.push(`/users/${ownerId}`)

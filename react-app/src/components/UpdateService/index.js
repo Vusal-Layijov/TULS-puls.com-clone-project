@@ -42,10 +42,10 @@ export default function UpdateService(){
             service_type_id
         }
         const errors = {}
-        if(!forUpdate.name.length) errors.name = 'Name is required'
-        if (!forUpdate.description.length) errors.description = 'Description is required'
+        if(!forUpdate.name.length) errors.name = 'Name can not be empty'
+        if (forUpdate.description.length<30) errors.description = 'Description needs at least 30 characters long'
         if (!forUpdate.price) errors.price = 'Price is required'
-        if (!forUpdate.city) errors.city = 'City is required'
+        if (!forUpdate.city) errors.city = 'City must present'
         if (!forUpdate.state.toString().length) errors.state = 'State is required';
         if (!service_type_id) errors.service_type_id = 'Service type is required'
 

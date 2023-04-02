@@ -52,8 +52,7 @@
     display: flex;
     justify-content: center;
     gap: 200px;
-   
-   
+    margin-bottom: 25px;   
 }
 .holdingdashboard{
     width: 400px;
