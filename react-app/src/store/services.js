@@ -18,6 +18,15 @@ export const load_services_thunk = (service_type_id) => async dispatch => {
         return data
     }
 }
+export const load_services_thunk_without = () => async dispatch => {
+    
+    const response = await fetch('/api/services')
+    if (response.ok) {
+        const data = await response.json()
+        dispatch(load_services_action(data))
+        return data
+    }
+}
 
 export const create_service_thunk = (service) => async dispatch =>{
     const response = await fetch('/api/services', {

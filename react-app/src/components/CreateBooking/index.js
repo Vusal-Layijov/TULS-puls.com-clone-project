@@ -5,7 +5,7 @@ import { create_nbooking_thunk } from "../../store/bookings";
 import './index.css'
 import { authenticate } from "../../store/session";
 import { load_services_thunk } from "../../store/services";
-
+import { load_services_thunk_without } from "../../store/services";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -16,7 +16,7 @@ export default function CreateBooking() {
     const history = useHistory()
     const dispatch = useDispatch()
     useEffect(()=>{
-        dispatch(load_services_thunk(+id))
+        dispatch(load_services_thunk_without())
     },[dispatch])
     const ownerId = useSelector((state => state.session.user.id))
     let services = useSelector(state => Object.values(state.services.all_services))
@@ -39,9 +39,12 @@ export default function CreateBooking() {
     };
 
     const handleDateChange = (date) => {
-        const formattedDate = date.toISOString().slice(0, 10);
-        // console.log('bu nediiiiiii',typeof(date.toISOString().slice(0, 10)))
-        setFormData({ ...formData, date: date ,formattedDate});
+        if (date){
+            const formattedDate = date.toISOString().slice(0, 10);
+            // console.log('bu nediiiiiii',typeof(date.toISOString().slice(0, 10)))
+            setFormData({ ...formData, date: date, formattedDate });
+        }
+        
     };
 
     const onSubmit = async (event) => {
@@ -54,9 +57,11 @@ export default function CreateBooking() {
             city:formData.city,
             service_id:id
         }
+        let booked
+        if(service.bookings){
 
-
-        let booked = service.bookings.find(booking => new Date(booking.date).toISOString().slice(0,10)==newBooking.date)
+            booked = service.bookings.find(booking => new Date(booking.date).toISOString().slice(0,10)==newBooking.date)
+        }
 
 
 

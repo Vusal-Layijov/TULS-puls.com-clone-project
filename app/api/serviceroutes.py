@@ -11,11 +11,13 @@ service_routes=Blueprint('services', __name__)
 @service_routes.route('')
 def get_services():
     type_id=request.args.get('service_type_id')
-    services=Service.query.filter_by(service_type_id=type_id).all()
+    if type_id:
+        services=Service.query.filter_by(service_type_id=type_id).all()
+        service_dict=[service.to_dict() for service in services]
+        return jsonify({'services' :service_dict})
+    services=Service.query.all()
     service_dict=[service.to_dict() for service in services]
-
     return jsonify({'services' :service_dict})
-
 @service_routes.route('', methods=["POST"])
 @login_required
 def create_service():

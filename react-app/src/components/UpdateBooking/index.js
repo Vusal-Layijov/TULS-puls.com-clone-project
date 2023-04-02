@@ -16,7 +16,6 @@ export function UpdateBooking(){
     const bookings = useSelector(state => Object.values(state.bookings.all_bookings))
     const userBookings=useSelector(state => state.session.user.bookings)
     const currentBooking = userBookings.find(book => book.id == id)
-    console.log('undiiiiiiiiiii',currentBooking)
     const [validationErrors, setValidationErrors] = useState({
         date: null,
         notes: '',
@@ -45,8 +44,11 @@ export function UpdateBooking(){
     } 
 
     const handleDateChange = (date) =>{
-        const formattedDate = date.toISOString().slice(0,10)
-        setFormData({...formData, date:date, formattedDate})
+        if(date){
+
+            const formattedDate = date.toISOString().slice(0,10)
+            setFormData({...formData, date:date, formattedDate})
+        }
     }
 
     const onSubmit = async (event) =>{
