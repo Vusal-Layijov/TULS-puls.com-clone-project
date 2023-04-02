@@ -1,4 +1,4 @@
-.spotclass {}
+
 
 .forimage {
     width: 250px;
@@ -41,3 +41,143 @@
     font-size: 30px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-slider .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 5px;
+    padding: 0;
+}
+
+.slick-slider .slick-list:focus {
+    outline: none;
+}
+
+.slick-slider .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slick-slider .slick-slide {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    padding: 0 20px;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-slider .slick-slide>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.slick-slider .slick-slide>div img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.slick-slider .slick-slide>div h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.slick-slider .slick-slide>div p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.slick-slider .slick-dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.slick-slider .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-slider .slick-dots li button {
+    display: block;
+    /* width: 10px;
+    height: 10px; */
+    border: 0;
+    outline: none;
+    background-color: rgb(26, 220, 223);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.slick-slider .slick-dots li button:hover,
+.slick-slider .slick-dots li button:focus {
+    background-color: #555;
+}
+
+.slick-slider .slick-dots li.slick-active button {
+    background-color: #555;
+}
+.slider-container{
+    margin-top: 50px;
+    height: 280px;
+}
+/* .user-info{
+    width: 200px;
+} */
+/* .forstarEdit{
+    display: flex;
+    justify-content:space-between;
+    gap: 300px;
+    margin-top: 35px;
+    
+} */

@@ -4,6 +4,7 @@ import { load_services_thunk } from "../../store/services"
 import { get_reviews_thunk } from "../../store/review"
 import { useModal } from "../../context/Modal"
 import { useHistory } from "react-router-dom"
+import './index.css'
 export default function DeleteReview({service_type_id, oldReview}){
     console.log('biyyyyyyyyyyy', oldReview.id)
     const history = useHistory()

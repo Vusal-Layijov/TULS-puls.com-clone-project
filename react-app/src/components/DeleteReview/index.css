@@ -1,0 +1,26 @@
+.delete-review-modal {
+    z-index: 3;
+    padding: 25px;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: bisque;
+}
+
+.stndrd-btn {
+    padding: 6px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.stndrd-btn:hover {
+    cursor: pointer;
+    color: brown;
+}
+
+
+.delete-keep button {
+    margin: 10px;
+}

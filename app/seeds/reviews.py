@@ -9,7 +9,7 @@ def seed_reviews():
         review="The cleaning was excellent, and the service was great too. Would definitely recommend!"
     )
     review2 = Review(
-        user_id=2,
+        user_id=4,
         service_id=1,
         stars=3,
         review="The cleaning was good, but the service was a bit slow."
@@ -39,7 +39,7 @@ def seed_reviews():
         review="The job was great, they came lkittle wait but I dont want give low review "
     )
     review7 = Review(
-        user_id=2,
+        user_id=3,
         service_id=1,
         stars=3,
         review="The cleaning was excellent, and the service was great too. Higly recommended!"
