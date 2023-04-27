@@ -56,6 +56,7 @@ export default function PhoneRepair() {
                 {services.map((service) => {
                     return (
                         <div key={service.id} className='forNew'>
+                            <div>
                             <div className="spotclass">
                                 <h2>{service.name}</h2>
                                 <p>By: {service.owner.username}</p>
@@ -67,6 +68,8 @@ export default function PhoneRepair() {
                             <div>{service.avgRating ? `⭐️ ${parseFloat(service.avgRating).toFixed(1)}` : '⭐️ New'}</div>
                             <p>Price: {service.price}$</p>
                             </div>
+                            </div>
+                            <div className="bookAndReview">
                             {user ? (
                                 service.ownerId == user.id ? null : (
                                     <>
@@ -77,6 +80,7 @@ export default function PhoneRepair() {
                                     </>
                                 )
                             ) : null}
+                        </div>
                         </div>
                     )
                 })

@@ -5,7 +5,9 @@
     text-align: center;
     
 }
-
+.spotclass {
+    overflow: hidden;
+}
 .forimage {
     width: 250px;
     height: 260px;
@@ -31,12 +33,18 @@
 }
 
 .forNew {
-    width: 200px;
+    width: 210px;
+    /* height: 220px; */
     padding: 10px;
  margin: 0 10px;
 background-color: #f7f7f7;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
 }
 
 .fornav {
@@ -189,3 +197,7 @@ background-color: #f7f7f7;
     margin-top: 35px;
     
 }
+/* .bookAndReview {
+    margin-top: 20px;
+    margin-bottom: 1px;
+} */

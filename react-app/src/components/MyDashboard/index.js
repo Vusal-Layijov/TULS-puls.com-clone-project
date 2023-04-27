@@ -21,7 +21,7 @@ if(!services) return null
                                         <div className='forDesc'>
                                             {service.description}
                                         </div>
-                                        <div className='forInside'>
+                                        <div className='forInside forChangeService'>
                                             {/* <div>{business.price}</div> */}
                                             <NavLink to={`/services/${service.id}/edit`}><button className='default-button curs globalmodal ' >Update</button></NavLink>
                                             {/* <div><OpenModalButton buttonText="Delete" modalComponent={<DeleteSpot spotId={spot.id} />} /></div> */}

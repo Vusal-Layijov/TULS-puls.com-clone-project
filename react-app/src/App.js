@@ -22,6 +22,7 @@ import AboutTuls from "./components/Abouttuls";
 import Membership from "./components/Memberships";
 import JoinMembership from "./components/JoinMembership";
 import CreateReview from "./components/CreateReview/review";
+import NotFound from "./components/NotFoundPAge";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -87,6 +88,9 @@ function App() {
           </Route>
           <Route path={'/memberships/:id'} >
             <JoinMembership />
+          </Route>
+          <Route>
+            <NotFound />
           </Route>
         </Switch>
       )}

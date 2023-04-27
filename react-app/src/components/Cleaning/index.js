@@ -62,17 +62,20 @@ export default function Cleaning() {
                 {services.map((service) => {
                     return (
                         <div key={service.id} className="forNew">
-                            <div className="spotclass">
+                            <div>
+                              <div className="spotclass">
                                 <h2>{service.name}</h2>
                                 <p>By: {service.owner.username}</p>
-                            </div>
-                            <div className="forinside">{service.description}</div>
-                            <div className="priceandavg">
+                              </div>
+                              <div className="forinside">{service.description}</div>
+                              <div className="priceandavg">
                                 <div>
                                     {service.avgRating ? `⭐️ ${parseFloat(service.avgRating).toFixed(1)}` : '⭐️ New'}
                                 </div>
                                 <p>Price {service.price}$</p>
+                              </div>
                             </div>
+                            <div className="bookAndReview">
                             {user ? (
                                 service.ownerId == user.id ? null : (
                                     <>
@@ -83,6 +86,7 @@ export default function Cleaning() {
                                     </>
                                 )
                             ) : null}
+                            </div>
                         </div>
                     );
                 })}
