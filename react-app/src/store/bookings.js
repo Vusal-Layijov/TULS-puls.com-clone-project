@@ -6,7 +6,7 @@ const get_bookings_action=(payload) =>{
         payload
     }
 }
-
+// bookings thunk
 export const get_bookings_thunk = () => async dispatch =>{
     const response = await fetch('/api/bookings')
     if(response.ok){
