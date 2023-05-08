@@ -120,7 +120,7 @@ export default function CreateReview({service_type_id, serviceId}) {
                 <button
                     className="rev-submit-button"
                     type="submit"
-                    // disabled={errors.length === 0 ? false : true}
+                    
                 >
                     Submit Your Review
                 </button>
