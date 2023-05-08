@@ -41,7 +41,7 @@ export default function CreateBooking() {
     const handleDateChange = (date) => {
         if (date){
             const formattedDate = date.toISOString().slice(0, 10);
-            // console.log('bu nediiiiiii',typeof(date.toISOString().slice(0, 10)))
+            
             setFormData({ ...formData, date: date, formattedDate });
         }
         
