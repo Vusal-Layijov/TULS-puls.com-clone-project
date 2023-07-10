@@ -29,3 +29,4 @@ werkzeug==2.2.2
 wtforms==3.0.1
 flask_mail==0.9.1
 boto3>=1.15.0
+psycopg2
