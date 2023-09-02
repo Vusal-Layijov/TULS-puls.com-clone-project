@@ -7,12 +7,11 @@ from .booking import seed_bookings, undo_bookings
 from .membership import seed_memberships, undo_memberships
 from app.models.db import db, environment, SCHEMA
 
-# Creates a seed group to hold our commands
-# So we can type `flask seed --help`
+
 seed_commands = AppGroup('seed')
 
 
-# Creates the `flask seed all` command
+
 @seed_commands.command('all')
 def seed():
     if environment == 'production':
